@@ -16,3 +16,5 @@
 -> np.where (condition) : returns a tuple
 -> map with Multiple Iterables
 -> zip in python
+-> To swap any two columns: arr[:, [new_column_order]]
+-> np.random.uniform
