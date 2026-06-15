@@ -1,0 +1,17 @@
+Data visualization
+
+- import matplotlib.pyplot as plt
+- Line chart using plot - plt.plot
+- Bar plot - plt.bar & plt.hbar [change the bar color as well]
+- Histogram
+- Scatter plot
+- Pie chart
+- Box plot
+
+New library: PLOTLY
+import plotly.express as px
+- In the super store data convert "order date: and "shape date" into the proper date format using the pd.to_datetime format
+- line chart
+- Bar plot
+
+- what are the legends in the charts?
