@@ -23,29 +23,47 @@ ex18 -> arr[::-1, :]                                        : Reverse the order 
 ex19 -> arr[:, ::-1]                                        : Reverse the order of columns in a 2D array.
 ex20 -> np.random.uniform(low, high, size)                  : Create a 2D array of random floats between a given range.
 ex21 -> np.set_printoptions(precision=3)                    : Control how many decimal places numpy prints for float arrays.
+ex22 -> np.set_printoptions(suppress=True)                  : Suppress scientific notation (e.g. 1e-10) and print as plain decimals.
+ex23 -> np.set_printoptions(threshold=6)                    : Limit the number of items shown when printing a large array (shows ... in between).
+ex24 -> np.set_printoptions(threshold=len(arr))             : Print the full numpy array without any truncation (use np.inf for always full).
+ex25 -> np.genfromtxt(file, delimiter, skip_header, usecols, dtype=object)           : Import a dataset with mixed numbers and text, keeping text intact.
+ex26 -> np.genfromtxt(file, delimiter, usecols=[-1], dtype=object)                  : Extract a particular column (e.g. last column) from a CSV file.
+ex27 -> np.genfromtxt(file, delimiter, skip_header, dtype=object, usecols=[0,1,2,3]): Load selected numeric columns from a CSV into a 2D array.
+ex28 -> np.mean(), np.median(), np.std()                    : Compute the mean, median, and standard deviation of a numpy array.
+ex29 -> (arr - np.min(arr)) / (np.max(arr) - np.min(arr))  : Normalize an array so all values range between 0 and 1.
+ex30 -> np.exp(arr) / np.sum(np.exp(arr))                   : Apply Softmax to convert array values into a probability distribution.
 
 ---------------------------------------------------------------------------------------------
                                     CONCEPTS SUMMARY
 ---------------------------------------------------------------------------------------------
 
--> import numpy as np
--> __version__
--> np.arange
--> np.full
--> np.reshape
--> array.copy()
--> np.vstack
--> np.hstack
--> np.repeat()     : repeats each element
--> np.tile()       : repeats the whole array
--> np.r_[a, b]    : shortcut for joining arrays; same as np.concatenate((arr1, arr2))
--> np.intersect1d(a,b) : gives the common elements between array a and b
--> np.union1d(a,b)     : all unique elements from both arrays
--> np.setdiff1d(a,b)   : elements in a but not in b
--> np.setxor1d(a,b)    : elements in either array but not both
--> np.where(condition)  : returns a tuple of indices where condition is True
--> map with Multiple Iterables
--> zip in python
--> arr[:, [new_column_order]] : swap/reorder columns
--> np.random.uniform          : random floats in a given range
--> np.set_printoptions(precision=N) : control decimal display precision
+-> import numpy as np                       : standard way to import the numpy library
+-> __version__                              : check the installed version of numpy
+-> np.arange                               : create a 1D array of evenly spaced values
+-> np.full                                 : create an array filled with a specified constant value
+-> np.reshape                              : change the shape of an array without altering its data
+-> array.copy()                            : create an independent copy so the original stays unchanged
+-> np.vstack                               : stack arrays vertically (row-wise)
+-> np.hstack                               : stack arrays horizontally (column-wise)
+-> np.repeat()                             : repeats each element a given number of times
+-> np.tile()                               : repeats the whole array a given number of times
+-> np.r_[a, b]                             : shortcut for joining arrays; same as np.concatenate((arr1, arr2))
+-> np.intersect1d(a, b)                    : common elements between two arrays
+-> np.union1d(a, b)                        : all unique elements from both arrays
+-> np.setdiff1d(a, b)                      : elements in a but not in b
+-> np.setxor1d(a, b)                       : elements in either array but not both
+-> np.where(condition)                     : returns a tuple of indices where condition is True
+-> map with Multiple Iterables             : apply a function across multiple iterables element-by-element
+-> zip in python                           : pair elements from multiple iterables together into tuples
+-> arr[:, [new_column_order]]              : swap/reorder columns
+-> arr[[new_row_order], :]                 : swap/reorder rows
+-> arr[::-1, :]                            : reverse rows
+-> arr[:, ::-1]                            : reverse columns
+-> np.random.uniform                       : random floats in a given range
+-> np.set_printoptions(precision=N)        : control decimal display precision
+-> np.set_printoptions(suppress=True)      : suppress scientific notation
+-> np.set_printoptions(threshold=N)        : limit items shown in output
+-> np.genfromtxt()                         : load data from a text/CSV file with flexible options
+-> np.mean(), np.median(), np.std()        : basic statistical functions
+-> normalization formula                   : (x - min) / (max - min)
+-> softmax formula                         : e^x_i / sum(e^x_j) — converts scores into a probability distribution
