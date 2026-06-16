@@ -1,0 +1,61 @@
+---------------------------------------------------------------------------------------------
+                            PANDAS EXERCISES - QUICK REFERENCE
+---------------------------------------------------------------------------------------------
+
+                              [ READING DATA - ex1 to ex12 ]
+
+ex1  -> pd.read_csv()                                       : Read a CSV file into a DataFrame and display first few rows with df.head().
+ex2  -> df.dtypes                                           : Check the data type of each column in the DataFrame.
+ex3  -> pd.read_csv(usecols=[list of columns])              : Load only specific columns by passing a list of column names to usecols.
+ex4  -> pd.read_csv(usecols=range(n))                      : Load only the first n columns by passing a range to usecols.
+ex5  -> pd.read_csv(nrows=n)                                : Limit the number of rows loaded from a CSV using the nrows parameter.
+ex6  -> pd.read_csv(skiprows=n)                             : Skip the first n rows of a file while reading using skiprows.
+ex7  -> pd.read_csv(skiprows=lambda x: x % 2 == 1)         : Skip rows conditionally using a lambda function with skiprows.
+ex8  -> pd.read_csv(index_col='column_name')                : Set a specific column as the DataFrame index while reading.
+ex9  -> pd.read_csv(parse_dates=['column_name'])            : Automatically parse a column as datetime while reading the CSV.
+ex10 -> pd.read_csv(na_values=['?'])                        : Treat custom strings/values as NaN (missing data) using na_values.
+ex11 -> df.to_csv('file.csv', index=False)                  : Save DataFrame to CSV; use index=False to avoid writing the row index as a column.
+ex12 -> pd.read_clipboard()                                 : Read tabular data directly from the clipboard into a DataFrame.
+
+                           [ EXPLORING DATA - ex13 to ex23 ]
+
+ex13 -> df.head(n)                                          : Display the first n rows of the DataFrame.
+ex14 -> df.tail(n)                                          : Display the last n rows of the DataFrame.
+ex15 -> df.shape, df.size, len(df)                          : Get dimensions (rows, cols), total cells, and total row count of the DataFrame.
+ex16 -> df.columns                                          : Get a list of all column names in the DataFrame.
+ex17 -> df.index                                            : View the index (row labels) of the DataFrame.
+ex18 -> df.dtypes                                           : Check the data type of every column.
+ex19 -> df.describe()                                       : Get a statistical summary (count, mean, std, min, max, etc.) of numeric columns.
+ex20 -> df.describe(percentiles=[0.1, 0.9])                 : Customize which percentiles appear in the describe() statistical summary.
+ex21 -> df.describe(include=[object])                       : Get a summary (count, unique, top, freq) for string/object type columns only.
+ex22 -> df.describe(include=float)                          : Limit the describe() summary to only float columns.
+ex23 -> df.memory_usage(), df.memory_usage().sum()          : Check memory used by each column and the total memory usage in bytes.
+
+---------------------------------------------------------------------------------------------
+                                    CONCEPTS SUMMARY
+---------------------------------------------------------------------------------------------
+
+- import pandas as pd
+- pd.read_csv
+- df.head()
+- df.dtypes
+- df.read_csv with usecols parameter  : value can be list of columns or range
+- df.read_csv with nrows parameter    : value can be int
+- df.read_csv with skiprows parameter : value can be int, list of rows, or lambda function
+- df.read_csv with index_col parameter : set a column as the row index
+- df.read_csv with parse_dates parameter : parse a column as datetime on load
+- df.read_csv with na_values parameter : treat custom values as NaN
+- df.to_csv(index=False)              : save to CSV without writing the DataFrame index
+- pd.read_clipboard()                 : read tabular data from clipboard
+- df.tail()                           : display last n rows
+- df.shape                            : (rows, columns) tuple
+- df.size                             : total number of cells (rows * columns)
+- len(df)                             : number of rows
+- df.columns                          : list of column names
+- df.index                            : row index labels
+- df.describe()                       : statistical summary of numeric columns
+- df.describe(percentiles=[...])      : customize percentiles in summary
+- df.describe(include=[object])       : summary for string/object columns
+- df.describe(include=float)          : summary for float columns only
+- df.memory_usage()                   : memory used per column in bytes
+- df.memory_usage().sum()             : total DataFrame memory usage in bytes

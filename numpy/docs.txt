@@ -1,0 +1,51 @@
+---------------------------------------------------------------------------------------------
+                            NUMPY EXERCISES - QUICK REFERENCE
+---------------------------------------------------------------------------------------------
+
+ex1  -> import numpy as np, np.__version__                  : Import numpy and check its version.
+ex2  -> np.arange(10)                                       : Create a 1D array using arange.
+ex3  -> np.full((3,3), True/False, dtype=bool), np.reshape  : Create a boolean array (all True or all False).
+ex4  -> arr[arr > 3]                                        : Extract items from a 1D array that satisfy a condition (boolean indexing).
+ex5  -> arr[arr > 3] = -1                                   : Replace items in-place that satisfy a condition with another value.
+ex6  -> array.copy()                                        : Modify a copy to avoid changing the original array.
+ex7  -> arr.reshape((5, -1))                                : Reshape a 1D array into a 2D array.
+ex8  -> np.vstack([arr1, arr2])                             : Stack two arrays vertically (row-wise).
+ex9  -> np.hstack([arr1, arr2])                             : Stack two arrays horizontally (column-wise).
+ex10 -> np.repeat(), np.tile(), np.r_[a, b]                 : Generate custom sequences by repeating elements or whole arrays, then concatenate.
+ex11 -> np.intersect1d(a, b)                                : Get common elements between two arrays.
+ex12 -> np.setdiff1d(a, b)                                  : Remove from array 'a' the elements that exist in array 'b'.
+ex13 -> np.where(a == b)                                    : Get positions/indices where elements of two arrays match.
+ex14 -> a[(a >= 5) & (a <= 10)]                             : Extract all numbers between a given range using boolean conditions.
+ex15 -> zip(), map() with lambda, np.vectorize concept       : Make a scalar function work element-wise on numpy arrays using zip/map.
+ex16 -> arr[:, [new_column_order]]                          : Swap two columns in a 2D array using fancy indexing.
+ex17 -> arr[[new_row_order], :]                             : Swap two rows in a 2D array using fancy indexing.
+ex18 -> arr[::-1, :]                                        : Reverse the order of rows in a 2D array.
+ex19 -> arr[:, ::-1]                                        : Reverse the order of columns in a 2D array.
+ex20 -> np.random.uniform(low, high, size)                  : Create a 2D array of random floats between a given range.
+ex21 -> np.set_printoptions(precision=3)                    : Control how many decimal places numpy prints for float arrays.
+
+---------------------------------------------------------------------------------------------
+                                    CONCEPTS SUMMARY
+---------------------------------------------------------------------------------------------
+
+-> import numpy as np
+-> __version__
+-> np.arange
+-> np.full
+-> np.reshape
+-> array.copy()
+-> np.vstack
+-> np.hstack
+-> np.repeat()     : repeats each element
+-> np.tile()       : repeats the whole array
+-> np.r_[a, b]    : shortcut for joining arrays; same as np.concatenate((arr1, arr2))
+-> np.intersect1d(a,b) : gives the common elements between array a and b
+-> np.union1d(a,b)     : all unique elements from both arrays
+-> np.setdiff1d(a,b)   : elements in a but not in b
+-> np.setxor1d(a,b)    : elements in either array but not both
+-> np.where(condition)  : returns a tuple of indices where condition is True
+-> map with Multiple Iterables
+-> zip in python
+-> arr[:, [new_column_order]] : swap/reorder columns
+-> np.random.uniform          : random floats in a given range
+-> np.set_printoptions(precision=N) : control decimal display precision
