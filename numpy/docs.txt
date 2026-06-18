@@ -32,6 +32,11 @@ ex27 -> np.genfromtxt(file, delimiter, skip_header, dtype=object, usecols=[0,1,2
 ex28 -> np.mean(), np.median(), np.std()                    : Compute the mean, median, and standard deviation of a numpy array.
 ex29 -> (arr - np.min(arr)) / (np.max(arr) - np.min(arr))  : Normalize an array so all values range between 0 and 1.
 ex30 -> np.exp(arr) / np.sum(np.exp(arr))                   : Apply Softmax to convert array values into a probability distribution.
+ex31 -> np.percentile(arr, q=[5, 95])                        : Find the 5th and 95th percentile scores of a numpy array.
+ex32 -> iris_data[rand_rows, rand_cols] = np.nan             : Insert NaN values at random positions in a 2D array.
+ex33 -> np.isnan(arr), np.where(np.isnan(arr))               : Find the count and positions of missing (NaN) values in a numpy array.
+ex34 -> arr[(arr[:, col1] > val1) & (arr[:, col2] < val2)]  : Filter rows of a 2D array based on two or more conditions.
+ex35 -> arr[np.sum(np.isnan(arr), axis=1) == 0]             : Drop all rows that contain at least one missing (NaN) value.
 
 ---------------------------------------------------------------------------------------------
                                     CONCEPTS SUMMARY
@@ -67,3 +72,10 @@ ex30 -> np.exp(arr) / np.sum(np.exp(arr))                   : Apply Softmax to c
 -> np.mean(), np.median(), np.std()        : basic statistical functions
 -> normalization formula                   : (x - min) / (max - min)
 -> softmax formula                         : e^x_i / sum(e^x_j) — converts scores into a probability distribution
+-> np.percentile(arr, q)                   : returns the q-th percentile(s) of the array values
+-> np.isnan(arr)                           : returns a boolean array marking True where values are NaN
+-> np.isnan(arr).sum()                     : counts total number of missing (NaN) values in an array
+-> np.where(np.isnan(arr))                 : returns the indices where NaN values are located
+-> arr[rand_rows, rand_cols] = np.nan      : assign NaN at specific (row, col) index pairs (fancy indexing assignment)
+-> multi-condition boolean filter          : combine conditions with & (and) or | (or) for row-wise filtering of 2D arrays
+-> np.sum(np.isnan(arr), axis=1) == 0      : identify rows with no missing values; use to drop NaN rows
