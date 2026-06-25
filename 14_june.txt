@@ -3,7 +3,7 @@ Data visualization
 - import matplotlib.pyplot as plt
 - Line chart using plot - plt.plot
 - Bar plot - plt.bar & plt.hbar [change the bar color as well]
-- Histogram
+- Histogram : a graphical tool used in statistics to show the frequency distribution of continuous numerical data
 - Scatter plot
 - Pie chart
 - Box plot
